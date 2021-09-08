@@ -2,7 +2,8 @@
 
 ## Syftet med automatiseringsprocessen?
 
-Är att underlätta arbetet för utvecklaren genom att skapa en automatisering mellan arbetsfiler och publikation av dessa filer. Dessutom minifieras, förbättras och kontrolleras filer, bilder etc. som därmed tar så liten plats som möjligt. Detta resulterar i att mängden HTTP-anrop minskas vilket gör att sidan laddas snabbare!   
+Är att underlätta arbetet för utvecklaren genom att skapa en automatisering mellan arbetsfiler och publikation av dessa filer.  
+Automatiseringen betyder att utvecklaren kan minifiera, förbättra och kontrollera filer, bilder etc. per automatik. Dessa tar därmed så liten plats som möjligt vilket resulterar i att mängden HTTP-anrop minskas & att sidan laddas snabbare!   
 
 ### Automatiseringsprocessen innehåller:
 
@@ -16,6 +17,13 @@ I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsproces
 
 
 ## NPM paket / verktyg
+1. **gulp** - för automatisering.
+2. **gulp-concat** - för att slå ihop mina js-filer och css-filer.
+3. **gulp-terser** - för att minifirera mina js-filer.
+4. **cssnano** - för att minifiera mina CSS-filer. 
+5. **gulp-imagemin** - för att minifiera mina bilder. 
+6. **gulp-Browsersync** - för att kunna använda och se hur sidan uppdateras live (som Live-server i VSC).
+7. **gulp-sourcemaps** - för att kunna se källkodens ursprung/sökväg (visar src mapparna).
 
 
 ## Mitt system / struktur
@@ -24,12 +32,13 @@ Följde till stor del de filmer som tillhör Moment 2 vilket gör att min strukt
 ### Mappstruktur
 
 Källkodsfilerna skapades i mappen **/src** 
-Grundstruktur är en **index.html** sida och 3 mappar **/css**, **/js** och **/pictures** skapades. 
-Publiceringsfilerna skapades i mappen **/pub**
+Grundstruktur är därmed en **index.html** fil och 3 mappar **/css**, **/js** och **/images** 
+
 
 ### Tasks
 
 
 ### Att använda mitt system / struktur
 
+Det som krävs för att kunna använda mitt system är:
 
