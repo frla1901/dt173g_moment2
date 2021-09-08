@@ -31,9 +31,12 @@ Följde till stor del de filmer som tillhör Moment 2 vilket gör att min strukt
 
 ### Mappstruktur
 
-Källkodsfilerna skapades i mappen **/src** 
-Grundstruktur är därmed en **index.html** fil och 3 mappar **/css**, **/js** och **/images** 
+Källkodsfilerna skapades i mappen **/src**  
+Grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/js** och **/images**  
+Mapparna innehåller filer som tydligt är namngivna utifrån innehåll. Exempelvis **body.css** och **button.js**  
 
+Publicerade filer skapas automatiskt till mappen **/pub**
+Skapade en .gitignore fil för att exkludera innehållet i **node_modules** och **pub** mapparna.
 
 ### Tasks
 
