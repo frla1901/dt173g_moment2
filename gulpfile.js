@@ -8,7 +8,8 @@ const {src, dest, parallel, series, watch} = require('gulp');   // Skapa variabe
                                                                 // series = tasks/funktioner körs i serie.
                                                                 // watch = övervakar förändringar i tasks
                                                                 
-const concat = require('gulp-concat');                          // Skapa variabel för att hämta gulp-paketet concat som slår samman (konkatenerar CSS och JavaScript)    
+const concat = require('gulp-concat');                          // Skapa variabel för att hämta gulp-paketet concat som slår samman (konkatenerar CSS och JavaScript)  
+const imagemin = require('gulp-imagemin');                      // Skapa variabel för att hämta gulp-paketet imagemin som komprimerar bilder
 
 
 const files = {
@@ -16,6 +17,7 @@ const files = {
       htmlPath:"src/**/*.html",               // sökväg till html filerna (src)
       cssPath:"src/**/*.css",                 // sökväg till css filerna (src)
       jsPath:"src/**/*.js",                   // sökväg till js filerna (src)
+      imagePath:"src/images/*"                // sökväg till alla olika format i mappen images (src)
 }
 
 // Task 1 - HTML - funktion som kopierar/hämtar över alla html-filer till publicering (pub)
@@ -41,8 +43,9 @@ function taskJS(){
 // Task 4 - Images - funktion som kopierar/hämtar över alla bildfiler till publicering (pub)
 function taskImages(){
     return src(files.imagePath)             // gulp metoden src = vilka sökvägar och därmed filer ska hämtas? 
+    .pipe (imagemin())                      // minifierar bilder
     .pipe(dest('pub/images'));              // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
 // exporterar från private till public parallellt 
-exports.default = parallel(taskHTML, taskCSS, taskJS);   // kör dessa samtidigt/parallellt
+exports.default = parallel(taskHTML, taskCSS, taskJS, taskImages);   // kör dessa samtidigt/parallellt

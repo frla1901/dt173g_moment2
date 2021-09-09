@@ -19,6 +19,7 @@
   "homepage": "https://github.com/frla1901/dt173g_moment2#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1"
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0"
   }
 }
