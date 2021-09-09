@@ -13,6 +13,7 @@ const imagemin = require('gulp-imagemin');                      // Skapa variabe
 const cssnano = require('gulp-cssnano');                        // Skapa variabel för att hämta gulp-paketet cssnano som minifierar CSS
 const terser = require('gulp-terser');                          // Skapa variabel för att hämta gulp-paketet terser som minifierar JavaScript
 const browserSync =require('browser-sync').create();            // Skapa variabel för att starta "live-server" 
+const sourceMaps = require('gulp-sourcemaps');                  // Skapar variabel för att kunna se sökväg till källkodsfilen (src inte pub)
 
 
 const files = {
@@ -32,8 +33,10 @@ function taskHTML(){
 // Task 2 - CSS - funktion som kopierar/hämtar över alla css-filer till publicering (pub)
 function taskCSS(){
     return src(files.cssPath)               // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
+    .pipe(sourceMaps.init())                // startar upp möjlighet att se källkodens ursprunglig plats (sökväg)
     .pipe(concat('main.css'))               // slår ihop alla css-filerna till en main.css fil 
     .pipe(cssnano())                        // minifierar alla css-filer
+    .pipe(sourceMaps.write('../maps'))      // skriver källkodens ursprunglig plats (sökväg)
     .pipe(dest('pub/css'))                  // skicka vidare filerna till pub genom att använda metoden .pipe
     .pipe(browserSync.stream());            // hämtar css förändringar 
 }
@@ -41,8 +44,11 @@ function taskCSS(){
 // Task 3 - JS - funktion som kopierar/hämtar över alla js.filer till publicering (pub)
 function taskJS(){
     return src(files.jsPath)                // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
+    .pipe(sourceMaps.init())                // startar upp möjlighet att se källkodens ursprunglig plats (sökväg)
+    
     .pipe(concat('main.js'))                // slår ihop alla js-filerna till en main.js fil 
     .pipe(terser())                         // minifierar alla js-filer
+    .pipe(sourceMaps.write('../maps'))      // skriver källkodens ursprunglig plats (sökväg)
     .pipe(dest('pub/js'));                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
