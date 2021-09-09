@@ -58,10 +58,17 @@ Skapade även en .gitignore fil för att exkludera innehållet i **node_modules*
 Totalt 5 tasks 
 
 1. HTML
+    Innehåller metoderna _src_ och _.pipe(dest)_
 2. JS
+    Innehåller metoderna _src_ och _.pipe(dest)_ samt _.init_, _.write_ och _.stream_
 3. CSS
+    Innehåller metoderna _src_ och _.pipe(dest)_ samt _.init_ och _.write_ 
 4. IMAGES
+    Innehåller metoderna _src_ och _.pipe(dest)_
 5. WATCH
+    Innehåller metoderna _watch_, _.init_ och _.reload_
+
+Utöver detta användes metoden _exports.default_ både för att skapa parallell och serie export från private till public.
 
 
 ### Att använda mitt system / struktur
@@ -70,7 +77,8 @@ Det som krävs för att kunna använda mitt system är:
 
 * NodeJs installerat på datorn.  
 
-* Klona detta repo: ![https://github.com/frla1901/dt173g_moment2.git](https://github.com/frla1901/dt173g_moment2.git)  
+* Klona detta repo:  
+[https://github.com/frla1901/dt173g_moment2.git](https://github.com/frla1901/dt173g_moment2.git)  
 
 * Kör _nmp install_ antingen i VSC terminalen eller datorns Terminal 
 

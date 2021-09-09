@@ -1,6 +1,6 @@
 /* CSS för knappen */
 button {
-    margin-left: 2%;
+    margin: 2.5% 0 2.5% 15%;
     padding: 20px 40px;
     border-radius: 10px;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
