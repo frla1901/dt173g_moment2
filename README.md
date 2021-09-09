@@ -77,16 +77,17 @@ Utöver detta användes metoden _exports.default_ både för att skapa parallell
 
 ### Att använda mitt system / struktur
 
-Det som krävs för att kunna använda mitt system är:
+Det som krävs för att kunna använda mitt system är att:
 
-* NodeJs installerat på datorn.  
+* NodeJs är installerat på datorn.  
 
-* Klona detta repo:  
+* Detta repo klonas antingen i VSC: 
 [https://github.com/frla1901/dt173g_moment2.git](https://github.com/frla1901/dt173g_moment2.git)  
+eller att kommandot git clone och länken till repot körs i terminalen
 
-* Kör _nmp install_ antingen i VSC terminalen eller datorns Terminal 
+* Kommandot _nmp install_ körs antingen i VSC terminalen eller datorns Terminal 
 
-* Kör _gulp_ antingen i VSC terminalen eller datorns Terminal 
+* Kommandot _gulp_ körs antingen i VSC terminalen eller datorns Terminal 
 
 Säkerställ att npm paketens versioner är som skärmavbilden & info nedan:) 
 
