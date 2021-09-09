@@ -10,7 +10,8 @@ const {src, dest, parallel, series, watch} = require('gulp');   // Skapa variabe
                                                                 
 const concat = require('gulp-concat');                          // Skapa variabel för att hämta gulp-paketet concat som slår samman (konkatenerar CSS och JavaScript)  
 const imagemin = require('gulp-imagemin');                      // Skapa variabel för att hämta gulp-paketet imagemin som komprimerar bilder
-
+const cssnano = require('gulp-cssnano');                        // Skapa variabel för att hämta gulp-paketet cssnano som minifierar CSS
+const terser = require('gulp-terser');                          // Skapa variabel för att hämta gulp-paketet terser som minifierar JavaScript
 
 const files = {
       // Skapa objekt som lagrar sökvägar
@@ -30,6 +31,7 @@ function taskHTML(){
 function taskCSS(){
     return src(files.cssPath)               // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
     .pipe(concat('main.css'))               // slår ihop alla css-filerna till en main.css fil 
+    .pipe(cssnano())                        // minifierar alla css-filer
     .pipe(dest('pub/css'))                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
@@ -37,6 +39,7 @@ function taskCSS(){
 function taskJS(){
     return src(files.jsPath)                // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
     .pipe(concat('main.js'))                // slår ihop alla js-filerna till en main.js fil 
+    .pipe(terser())                         // minifierar alla js-filer
     .pipe(dest('pub/js'));                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
