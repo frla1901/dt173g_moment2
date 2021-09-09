@@ -1,0 +1,53 @@
+<!-- Moment 2 i kursen DT173G Webbutveckling III -->
+<!-- Skapad av Frida Lazzari september 2021 -->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbutveckling III | Moment 2</title>
+
+    <!-- länk till mina css filer -->
+    <link rel="stylesheet" href="/css/body.css" type="text/css">
+    <link rel="stylesheet" href="/css/button.css" type="text/css">
+    <link rel="stylesheet" href="/css/date.css" type="text/css">
+    <link rel="stylesheet" href="/css/text.css" type="text/css">
+
+</head>
+<body>
+<h1>Webbutveckling III</h1>
+<h2>Moment 2 - NodeJs och automatisering med Gulp </h2>
+<br>
+<section>
+    <article>
+        <h3>Syftet med automatiseringsprocessen?</h3>
+
+<p>Är att underlätta arbetet för utvecklaren genom att skapa en automatisering mellan arbetsfiler och publikation av dessa filer.</p>  
+<p>Automatiseringen betyder att utvecklaren kan minifiera, förbättra och kontrollera filer, bilder etc. per automatik.</p>
+<p>Dessa tar därmed så liten plats som möjligt vilket resulterar i att mängden HTTP-anrop minskas & att sidan laddas snabbare!</p>   
+<br>
+
+<h4>Automatiseringsprocessen innehåller:</h4>
+<ul>
+    <li>Sammanslagning och minifiering av filer</li>
+    <li>Komprimering samt optimering av bilder</li>
+    <li>Konvertering av innehåll, som ex. SASS -> CSS eller LESS -> CSS</li>
+    <li>Kvalitetskontroll av källkod</li>
+    <li>... och mycket mer.</li>
+</ul>
+<br>
+<p>I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsprocessen.</p>
+
+<!-- funktionen i button.js -->
+<button onclick="buttonFunction()">Mitt gitHub Repo</button>
+
+<!-- funktionen i date.js -->
+<h4>Dagens datum:</h4>
+<p id="date" class="date"></p>
+</section>
+<!-- länk till mina js filer -->
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+</body>
+</html>

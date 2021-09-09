@@ -1,0 +1,7 @@
+/* CSS för datumvisaren*/
+.date {
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color:#fff;
+}

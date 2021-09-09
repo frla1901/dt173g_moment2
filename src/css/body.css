@@ -1,0 +1,7 @@
+/* Generell CSS för hela webbplatesn */
+body{
+    background-color: rgba(17, 32, 71, 1);
+    margin: 10%;
+    border: 5px solid #fff;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}

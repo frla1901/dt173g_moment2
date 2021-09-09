@@ -1,0 +1,11 @@
+/* CSS för knappen */
+button {
+    margin-left: 2%;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color:rgba(17, 32, 71, 1);
+    background-color: white;
+}

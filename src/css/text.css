@@ -1,0 +1,29 @@
+/* CSS för all text */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin-left: 2%;
+    color:#fff;
+}
+h4 {
+    padding-top: 2%;
+    margin-right: 2%;
+    border-top: 5px solid #fff;
+}
+
+p, 
+li {
+    margin-left: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color:#fff;
+}
+
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color:#fff;
+}
