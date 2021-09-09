@@ -27,12 +27,14 @@ function taskHTML(){
 // Task 2 - CSS - funktion som kopierar/hämtar över alla css-filer till publicering (pub)
 function taskCSS(){
     return src(files.cssPath)               // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
+    .pipe(concat('main.css'))               // slår ihop alla css-filerna till en main.css fil 
     .pipe(dest('pub/css'))                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
 // Task 3 - JS - funktion som kopierar/hämtar över alla js.filer till publicering (pub)
 function taskJS(){
     return src(files.jsPath)                // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
+    .pipe(concat('main.js'))                // slår ihop alla js-filerna till en main.js fil 
     .pipe(dest('pub/js'));                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 // exporterar från private till public parallellt 
