@@ -32,29 +32,29 @@ Jag gjorde mycket förarbete/planering av struktur klart i förväg då jag koda
 
 ### Mappstruktur
 
-#### README.md
+#### _README.md_
 Använde VSC och valde att klona ner det repo som jag skapat på GitHub **dt173g_moment2**  
 README filen som du läser just nu skapades först på GitHub men justerades sen i VSC och slutligen på GitHub igen.
 
-#### /src 
+#### _/src_
 Innehåller källkodsfilerna och grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/images** och **/js**  
 Mapparna innehåller filer som tydligt är namngivna utifrån innehåll. Exempelvis **body.css** och **button.js**  
 Innehållet i **/src** mappen skapades helt lokalt i VSC först - testade så att js funktionalitet samt css fungerade helt utan automatisering.  
 
-#### gulpfile.js
+#### _gulpfile.js_
 Innehåller all min Gulpkod. 
 
-#### Automatiserade mappar  
+#### _Automatiserade mappar_  
 **/pub** Innehåller alla publicerade filer  
 **/maps** undermap till **/pub** som innehåller källkodens ursprung/sökväg
 
-#### Automatiserade filer
+#### _Automatiserade filer_
 **main.css** - sammanslagna och minifierade CSS filer.  
 **main.js** - sammanslagna och minifierade JS filer.    
 **main.css.maps** - fil som innehåller mapping till CSS filernas ursprungliga plats/sökväg.  
 **main.js.maps**  - fil som innehåller mapping till JS filerna ursprungliga plats/sökväg.  
 
-##### .gitignore 
+#### _.gitignore_ 
 Denna fil skapades för att automatiskt kunna exkludera innehållet i **node_modules** och **/pub** mapparna när jag pushade till GitHub repot. 
 
 ### Tasks
