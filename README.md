@@ -14,6 +14,7 @@
 
 I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsprocessen.
 
+![Gulp logo](https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg)
 
 ## NPM paket / verktyg
 1. **gulp** - för automatisering.
@@ -83,9 +84,17 @@ Det som krävs för att kunna använda mitt system är:
 
 * Kör _gulp_ antingen i VSC terminalen eller datorns Terminal 
 
-Säkerställ att npm paketens versioner är som skärmavbilden nedan:) 
+Säkerställ att npm paketens versioner är som skärmavbilden & info nedan:) 
 
 ![Skärmavbild Package.json fil som beskriver det som har skapats](https://github.com/frla1901/dt173g_moment2/blob/main/src/images/Skärmavbild.png)
 
-![Gulp logo](https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg)
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.0.1"
+
+
 
