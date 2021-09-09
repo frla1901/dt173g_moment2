@@ -1,0 +1,20 @@
+{
+  "name": "dt173g_moment2",
+  "version": "1.0.0",
+  "description": "## Syftet med automatiseringsprocessen?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frla1901/dt173g_moment2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frla1901/dt173g_moment2/issues"
+  },
+  "homepage": "https://github.com/frla1901/dt173g_moment2#readme"
+}
