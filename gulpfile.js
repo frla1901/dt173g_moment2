@@ -12,6 +12,8 @@ const concat = require('gulp-concat');                          // Skapa variabe
 const imagemin = require('gulp-imagemin');                      // Skapa variabel för att hämta gulp-paketet imagemin som komprimerar bilder
 const cssnano = require('gulp-cssnano');                        // Skapa variabel för att hämta gulp-paketet cssnano som minifierar CSS
 const terser = require('gulp-terser');                          // Skapa variabel för att hämta gulp-paketet terser som minifierar JavaScript
+const browserSync =require('browser-sync').create();            // Skapa variabel för att starta "live-server" 
+
 
 const files = {
       // Skapa objekt som lagrar sökvägar
@@ -33,6 +35,7 @@ function taskCSS(){
     .pipe(concat('main.css'))               // slår ihop alla css-filerna till en main.css fil 
     .pipe(cssnano())                        // minifierar alla css-filer
     .pipe(dest('pub/css'))                  // skicka vidare filerna till pub genom att använda metoden .pipe
+    .pipe(browserSync.stream());            // hämtar css förändringar 
 }
 
 // Task 3 - JS - funktion som kopierar/hämtar över alla js.filer till publicering (pub)
@@ -50,5 +53,23 @@ function taskImages(){
     .pipe(dest('pub/images'));              // skicka vidare filerna till pub genom att använda metoden .pipe
 }
 
+// Task 5 - Watch - funktion som kontrollerar/övervakar förändringar 
+function taskWatch(){
+    browserSync.init({  //initierar browsersynk så att live-server startas upp
+        server:"./pub"
+    });
+
+    watch([files.htmlPath, files.cssPath, files.jsPath, files.imagePath], // Övervakar dessa filer
+        parallel(taskHTML, taskCSS, taskJS, taskImages)).on('change', browserSync.reload); // kör dessa parallellt 
+
+}
+
+// exporterar från private till public i serie 
+exports.default = series(
+    parallel(taskHTML, taskCSS, taskJS, taskImages),  // kör dessa samtidigt/parallellt
+    taskWatch // kör därefter funktionen watchTask
+    );  
+
+
 // exporterar från private till public parallellt 
-exports.default = parallel(taskHTML, taskCSS, taskJS, taskImages);   // kör dessa samtidigt/parallellt
+/* exports.default = parallel(taskHTML, taskCSS, taskJS, taskImages);   // kör dessa samtidigt/parallellt */
