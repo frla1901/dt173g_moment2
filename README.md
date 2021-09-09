@@ -2,8 +2,7 @@
 
 ## Syftet med automatiseringsprocessen?
 
-Är att underlätta arbetet för utvecklaren genom att skapa en automatisering mellan arbetsfiler och publikation av dessa filer.  
-Automatiseringen betyder att utvecklaren kan minifiera, förbättra och kontrollera filer, bilder etc. per automatik. Dessa tar därmed så liten plats som möjligt vilket resulterar i att mängden HTTP-anrop minskas & att sidan laddas snabbare!   
+Är att underlätta arbetet för utvecklaren genom att skapa en automatisering mellan arbetsfiler och publikation av dessa filer. Automatiseringen betyder att utvecklaren kan minifiera, förbättra och kontrollera filer, bilder etc. per automatik. Dessa tar därmed så liten plats som möjligt vilket resulterar i att mängden HTTP-anrop minskas & att sidan laddas snabbare!   
 
 ### Automatiseringsprocessen innehåller:
 
@@ -28,44 +27,44 @@ I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsproces
 
 ## Mitt system / struktur
 Följde till stor del de filmer som tillhör Moment 2 vilket gör att min struktur liknar den som presenterades!
-Jag gjorde mycket förarbete klart i och med att jag kodade DEMO-GULP enligt filmerna.
+Jag gjorde mycket förarbete/planering av struktur klart i förväg då jag kodade DEMO-GULP simultant som jag såg på filmerna.
 
 ### Mappstruktur
 
-Källkodsfilerna skapades i mappen **/src**  
+Källkodsfilerna finns i mappen **/src**  
 Grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/images** och **/js**  
 Mapparna innehåller filer som tydligt är namngivna utifrån innehåll. Exempelvis **body.css** och **button.js**  
 Innehållet i **/src** mappen skapades helt lokalt i VSC först - testade så att js funktionalitet samt css fungerade helt utan automatisering. 
 
-När git startades valde jag att klona ner det repo som jag skapat på GitHub **dt173g_moment2**. README filen som du läser nu skapades först på GitHub men justerades sen i VSC. 
+Använde VSC och valde att klona ner det repo som jag skapat på GitHub **dt173g_moment2**. README filen som du läser nu skapades först på GitHub men justerades sen i VSC. 
 
-Valde att skapa en Gulp fil **gulpfile.js** som innehåller all min Gulpkod. 
+Filen **gulpfile.js** som innehåller all min Gulpkod. 
 
 Automatiserade mappar är:  
 **/pub** Publicerade filer  
 **/maps** Källkodens ursprung/sökväg
 
 Automatiserade filer är:  
-**main.css**
-**main.js**
-**main.css.maps**
-**main.js.maps**
+**main.css**  
+**main.js**  
+**main.css.maps**  
+**main.js.maps**  
 
-Skapade även en .gitignore fil för att exkludera innehållet i **node_modules** och **pub** mapparna när jag pushade till GitHub repot. 
+Skapade även en .gitignore fil för att exkludera innehållet i **node_modules** och **/pub** mapparna när jag pushade till GitHub repot. 
 
 ### Tasks
 
 Totalt 5 tasks 
 
-1. HTML
+1. HTML  
     Innehåller metoderna _src_ och _.pipe(dest)_
-2. JS
+2. JS  
     Innehåller metoderna _src_ och _.pipe(dest)_ samt _.init_, _.write_ och _.stream_
-3. CSS
+3. CSS  
     Innehåller metoderna _src_ och _.pipe(dest)_ samt _.init_ och _.write_ 
-4. IMAGES
+4. IMAGES  
     Innehåller metoderna _src_ och _.pipe(dest)_
-5. WATCH
+5. WATCH  
     Innehåller metoderna _watch_, _.init_ och _.reload_
 
 Utöver detta användes metoden _exports.default_ både för att skapa parallell och serie export från private till public.
@@ -86,7 +85,7 @@ Det som krävs för att kunna använda mitt system är:
 
 Säkerställ att npm paketens versioner är som skärmavbilden nedan:) 
 
-![Skärmavbild Package.json fil som beskriver det som har skapats](https://github.com/frla1901/dt173g_moment2/tree/main/src/images/Skärmavbild.png)
+![Skärmavbild Package.json fil som beskriver det som har skapats](https://github.com/frla1901/dt173g_moment2/blob/main/src/images/Skärmavbild.png)
 
 ![Gulp logo](https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg)
 
