@@ -23,7 +23,7 @@ I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsproces
 4. **gulp-cssnano** - för att minifiera mina CSS-filer. 
 5. **gulp-imagemin** - för att minifiera mina bilder. 
 6. **browser-sync** - för att kunna använda och se hur sidan uppdateras live (som Live-server i VSC).
-7. **gulp-sourcemaps** - för att kunna se källkodens ursprung/sökväg (visar src mapparna).
+7. **gulp-sourcemaps** - för att kunna se källkodens ursprung/sökväg.
 
 
 ## Mitt system / struktur
@@ -32,26 +32,30 @@ Jag gjorde mycket förarbete/planering av struktur klart i förväg då jag koda
 
 ### Mappstruktur
 
-Källkodsfilerna finns i mappen **/src**  
-Grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/images** och **/js**  
+#### README.md
+Använde VSC och valde att klona ner det repo som jag skapat på GitHub **dt173g_moment2**  
+README filen som du läser just nu skapades först på GitHub men justerades sen i VSC och slutligen på GitHub igen.
+
+#### /src 
+Innehåller källkodsfilerna och grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/images** och **/js**  
 Mapparna innehåller filer som tydligt är namngivna utifrån innehåll. Exempelvis **body.css** och **button.js**  
-Innehållet i **/src** mappen skapades helt lokalt i VSC först - testade så att js funktionalitet samt css fungerade helt utan automatisering. 
+Innehållet i **/src** mappen skapades helt lokalt i VSC först - testade så att js funktionalitet samt css fungerade helt utan automatisering.  
 
-Använde VSC och valde att klona ner det repo som jag skapat på GitHub **dt173g_moment2**. README filen som du läser nu skapades först på GitHub men justerades sen i VSC. 
+#### gulpfile.js
+Innehåller all min Gulpkod. 
 
-Filen **gulpfile.js** som innehåller all min Gulpkod. 
+#### Automatiserade mappar  
+**/pub** Innehåller alla publicerade filer  
+**/maps** undermap till **/pub** som innehåller källkodens ursprung/sökväg
 
-Automatiserade mappar är:  
-**/pub** Publicerade filer  
-**/maps** Källkodens ursprung/sökväg
+#### Automatiserade filer
+**main.css** - sammanslagna och minifierade CSS filer.  
+**main.js** - sammanslagna och minifierade JS filer.    
+**main.css.maps** - fil som innehåller mapping till CSS filernas ursprungliga plats/sökväg.  
+**main.js.maps**  - fil som innehåller mapping till JS filerna ursprungliga plats/sökväg.  
 
-Automatiserade filer är:  
-**main.css**  
-**main.js**  
-**main.css.maps**  
-**main.js.maps**  
-
-Skapade även en .gitignore fil för att exkludera innehållet i **node_modules** och **/pub** mapparna när jag pushade till GitHub repot. 
+##### .gitignore 
+Denna fil skapades för att automatiskt kunna exkludera innehållet i **node_modules** och **/pub** mapparna när jag pushade till GitHub repot. 
 
 ### Tasks
 
