@@ -20,9 +20,9 @@ I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsproces
 1. **gulp** - för automatisering.
 2. **gulp-concat** - för att slå ihop mina js-filer och css-filer.
 3. **gulp-terser** - för att minifirera mina js-filer.
-4. **cssnano** - för att minifiera mina CSS-filer. 
+4. **gulp-cssnano** - för att minifiera mina CSS-filer. 
 5. **gulp-imagemin** - för att minifiera mina bilder. 
-6. **gulp-Browsersync** - för att kunna använda och se hur sidan uppdateras live (som Live-server i VSC).
+6. **browser-sync** - för att kunna använda och se hur sidan uppdateras live (som Live-server i VSC).
 7. **gulp-sourcemaps** - för att kunna se källkodens ursprung/sökväg (visar src mapparna).
 
 
@@ -42,6 +42,9 @@ Skapade en .gitignore fil för att exkludera innehållet i **node_modules** och 
 
 
 ### Att använda mitt system / struktur
+![Package.json fil som beskriver det som har skapats](/images/Skärmavbild 2021-09-09 kl. 13.31.59.png)
 
 Det som krävs för att kunna använda mitt system är:
+
+![Gulp logo](https://commons.wikimedia.org/wiki/File:Gulp.js_Logo.svg)
 

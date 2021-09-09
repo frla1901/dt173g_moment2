@@ -1,7 +1,7 @@
 {
   "name": "dt173g_moment2",
   "version": "1.0.0",
-  "description": "## Syftet med automatiseringsprocessen?",
+  "description": "Moment 2 - Webbutveckling III DT174G",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/frla1901/dt173g_moment2.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodeJs", "npm", "gulp", "gulp-concat", "gulp-cssnano", "gulp-imagemin", "gulp-sourcemaps", "gulp-terser", "browser-sync", "git", "gitHub" ],
+  "author": "Frida Lazzari",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/frla1901/dt173g_moment2/issues"
