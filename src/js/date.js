@@ -1,5 +1,4 @@
 // Skapar ett Date objekt - current day and date
-
 var date = new Date(),
 options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
 

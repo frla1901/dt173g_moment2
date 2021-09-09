@@ -37,5 +37,12 @@ function taskJS(){
     .pipe(concat('main.js'))                // slår ihop alla js-filerna till en main.js fil 
     .pipe(dest('pub/js'));                  // skicka vidare filerna till pub genom att använda metoden .pipe
 }
+
+// Task 4 - Images - funktion som kopierar/hämtar över alla bildfiler till publicering (pub)
+function taskImages(){
+    return src(files.imagePath)             // gulp metoden src = vilka sökvägar och därmed filer ska hämtas? 
+    .pipe(dest('pub/images'));              // skicka vidare filerna till pub genom att använda metoden .pipe
+}
+
 // exporterar från private till public parallellt 
 exports.default = parallel(taskHTML, taskCSS, taskJS);   // kör dessa samtidigt/parallellt
