@@ -45,7 +45,6 @@ function taskCSS(){
 function taskJS(){
     return src(files.jsPath)                // gulp metoden src = vilka sökvägar och därmed filer ska hämtas?
     .pipe(sourceMaps.init())                // startar upp möjlighet att se källkodens ursprunglig plats (sökväg)
-    
     .pipe(concat('main.js'))                // slår ihop alla js-filerna till en main.js fil 
     .pipe(terser())                         // minifierar alla js-filer
     .pipe(sourceMaps.write('../maps'))      // skriver källkodens ursprunglig plats (sökväg)

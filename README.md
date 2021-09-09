@@ -28,23 +28,57 @@ I detta moment har jag använt mig av npm verktyget Gulp i automatiseringsproces
 
 ## Mitt system / struktur
 Följde till stor del de filmer som tillhör Moment 2 vilket gör att min struktur liknar den som presenterades!
+Jag gjorde mycket förarbete klart i och med att jag kodade DEMO-GULP enligt filmerna.
 
 ### Mappstruktur
 
 Källkodsfilerna skapades i mappen **/src**  
-Grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/js** och **/images**  
+Grundstruktur i mappen är en **index.html** fil och 3 mappar **/css**, **/images** och **/js**  
 Mapparna innehåller filer som tydligt är namngivna utifrån innehåll. Exempelvis **body.css** och **button.js**  
+Innehållet i **/src** mappen skapades helt lokalt i VSC först - testade så att js funktionalitet samt css fungerade helt utan automatisering. 
 
-Publicerade filer skapas automatiskt till mappen **/pub**
-Skapade en .gitignore fil för att exkludera innehållet i **node_modules** och **pub** mapparna.
+När git startades valde jag att klona ner det repo som jag skapat på GitHub **dt173g_moment2**. README filen som du läser nu skapades först på GitHub men justerades sen i VSC. 
+
+Valde att skapa en Gulp fil **gulpfile.js** som innehåller all min Gulpkod. 
+
+Automatiserade mappar är:  
+**/pub** Publicerade filer  
+**/maps** Källkodens ursprung/sökväg
+
+Automatiserade filer är:  
+**main.css**
+**main.js**
+**main.css.maps**
+**main.js.maps**
+
+Skapade även en .gitignore fil för att exkludera innehållet i **node_modules** och **pub** mapparna när jag pushade till GitHub repot. 
 
 ### Tasks
 
+Totalt 5 tasks 
+
+1. HTML
+2. JS
+3. CSS
+4. IMAGES
+5. WATCH
+
 
 ### Att använda mitt system / struktur
-![Package.json fil som beskriver det som har skapats](/images/Skärmavbild 2021-09-09 kl. 13.31.59.png)
 
 Det som krävs för att kunna använda mitt system är:
 
-![Gulp logo](https://commons.wikimedia.org/wiki/File:Gulp.js_Logo.svg)
+* NodeJs installerat på datorn.  
+
+* Klona detta repo: ![https://github.com/frla1901/dt173g_moment2.git](https://github.com/frla1901/dt173g_moment2.git)  
+
+* Kör _nmp install_ antingen i VSC terminalen eller datorns Terminal 
+
+* Kör _gulp_ antingen i VSC terminalen eller datorns Terminal 
+
+Säkerställ att npm paketens versioner är som skärmavbilden nedan:) 
+
+![Skärmavbild Package.json fil som beskriver det som har skapats](https://github.com/frla1901/dt173g_moment2/tree/main/src/images/Skärmavbild.png)
+
+![Gulp logo](https://upload.wikimedia.org/wikipedia/commons/7/72/Gulp.js_Logo.svg)
 
